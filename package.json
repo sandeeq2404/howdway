@@ -11,9 +11,10 @@
     "typecheck": "tsc --noEmit -p tsconfig.app.json"
   },
   "dependencies": {
+    "@fontsource/space-grotesk": "^5.2.10",
     "@supabase/supabase-js": "^2.57.4",
     "firebase": "^12.7.0",
-    "framer-motion": "^12.23.26",
+    "framer-motion": "^12.26.2",
     "gray-matter": "^4.0.3",
     "lucide-react": "^0.344.0",
     "marked": "^17.0.1",
