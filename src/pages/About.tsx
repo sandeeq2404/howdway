@@ -3,7 +3,7 @@ import PageTransition from '../components/PageTransition';
 import kumaravelImg from '../assets/team/kumaravel.webp';
 import thamizhImg from '../assets/team/thamizh.webp';
 import joeImg from '../assets/team/joe.webp';
-import sandeepImg from '../assets/team/sandeep.jpg';
+
 
 export default function About() {
   return (
@@ -55,11 +55,7 @@ export default function About() {
                   role="People & Operations Head"
                 />
 
-                <TeamMember
-                  image={sandeepImg}
-                  name="Sandeep"
-                  role="Product & Growth"
-                />
+                
 
               </div>
             </div>
