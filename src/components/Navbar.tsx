@@ -43,13 +43,7 @@ export default function Navbar() {
             );
           })}
 
-          {/* CTA BUTTON */}
-          <Link
-            to="/contact"
-            className="ml-4 px-5 py-2 rounded-lg border border-white/20 text-sm text-white hover:bg-white hover:text-black transition"
-          >
-            Get Started
-          </Link>
+          
         </div>
 
         {/* MOBILE BUTTON */}
@@ -79,13 +73,7 @@ export default function Navbar() {
             </Link>
           ))}
 
-          <Link
-            to="/contact"
-            onClick={() => setOpen(false)}
-            className="block mt-4 px-4 py-2 rounded-lg border border-white/20 text-center text-white hover:bg-white hover:text-black transition"
-          >
-            Get Started
-          </Link>
+          
         </div>
       )}
     </nav>
