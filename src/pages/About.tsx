@@ -3,9 +3,10 @@ import PageTransition from '../components/PageTransition';
 
 import homeImage from '../assets/main/horse.webp';
 
-import kumaravelImg from '../assets/team/kumaravel.webp';
-import thamizhImg from '../assets/team/thamizh.webp';
-import joeImg from '../assets/team/joe.webp';
+import kumaravelImg from '../assets/team/kumaravel1.webp';
+import thamizhImg from '../assets/team/thamizh1.webp';
+import joeImg from '../assets/team/joe2.webp';
+import sandeepImg from '../assets/team/sandeep1.webp';
 
 const About = () => {
   return (
@@ -86,65 +87,123 @@ const About = () => {
           </div>
         </section>
 
-        {/* TEAM */}
-        <section className="relative w-full py-32 border-t border-white/10">
-          <div className="max-w-7xl mx-auto px-8">
+       
 
-            <h2 className="text-4xl md:text-5xl font-light mb-20 text-center">
-              The People Behind
-              <span className="font-normal"> the Vision</span>
-            </h2>
+{/* TEAM */}
+<section className="relative w-full py-32 border-t border-white/10">
+  <div className="max-w-7xl mx-auto px-8">
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+    {/* Heading */}
+    <h2 className="text-4xl md:text-5xl font-light mb-20 text-center text-white">
+      The People Behind
+      <span className="font-normal"> the Vision</span>
+    </h2>
 
-              {/* CEO */}
-              <div className="group relative p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-xl">
-                <img
-                  src={kumaravelImg}
-                  alt="CEO"
-                  className="w-full h-72 object-cover rounded-xl mb-6"
-                />
-                <h3 className="text-xl font-medium">Kumaravel</h3>
-                <p className="text-sm text-[#5eead4] mt-1">Founder & CEO</p>
-                <p className="text-gray-300 text-sm mt-4 leading-relaxed">
-                  Vision-driven leader focused on building scalable AI products
-                  and shaping long-term technology strategy.
-                </p>
-              </div>
+    {/* TEAM ROW */}
+    <div className="
+      flex flex-wrap lg:flex-nowrap
+      justify-center
+      gap-16
+      px-6 lg:px-20
+    ">
 
-              {/* CTO */}
-              <div className="group relative p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-xl">
-                <img
-                  src={thamizhImg}
-                  alt="CTO"
-                  className="w-full h-72 object-cover rounded-xl mb-6"
-                />
-                <h3 className="text-xl font-medium">Thamizh</h3>
-                <p className="text-sm text-[#5eead4] mt-1">CTO</p>
-                <p className="text-gray-300 text-sm mt-4 leading-relaxed">
-                  Architecting intelligent systems, infrastructure, and scalable
-                  AI-driven platforms.
-                </p>
-              </div>
+      {/* Kumaravel */}
+      <div className="text-center max-w-[220px]">
+        <img
+          src={kumaravelImg}
+          alt="Kumaravel N"
+          className="
+            w-40 h-40
+            mx-auto
+            rounded-full
+            object-cover
+            mb-6
+          "
+        />
+        <h3 className="text-lg font-medium text-white">
+          Kumaravel N
+        </h3>
+        <p className="text-sm text-white mt-1">
+          CEO
+        </p>
+        <p className="text-sm text-white mt-1">
+          Data Science 
+        </p>
+      </div>
 
-              {/* ENGINEER / TEAM */}
-              <div className="group relative p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-xl">
-                <img
-                  src={joeImg}
-                  alt="Core Team"
-                  className="w-full h-72 object-cover rounded-xl mb-6"
-                />
-                <h3 className="text-xl font-medium">Joe</h3>
-                <p className="text-sm text-[#5eead4] mt-1">Core Engineer</p>
-                <p className="text-gray-300 text-sm mt-4 leading-relaxed">
-                  Building, experimenting, and shipping real-world AI solutions
-                  with precision and creativity.
-                </p>
-              </div>
+      {/* Thamizhselvan */}
+      <div className="text-center max-w-[220px]">
+        <img
+          src={thamizhImg}
+          alt="Thamizhselvan M"
+          className="
+            w-40 h-40
+            mx-auto
+            rounded-full
+            object-cover
+            mb-6
+          "
+        />
+        <h3 className="text-lg font-medium text-white">
+          Thamizhselvan M
+        </h3>
+        <p className="text-sm text-white mt-1">
+          CTO 
+        </p>
+        <p className="text-sm text-white mt-1">
+          Software Developer
+        </p>
+      </div>
 
-            </div>
-          </div>
-        </section>
+      {/* Joe */}
+      <div className="text-center max-w-[220px]">
+        <img
+          src={joeImg}
+          alt="Joe Blessyn K"
+          className="
+            w-40 h-40
+            mx-auto
+            rounded-full
+            object-cover
+            mb-6
+          "
+        />
+        <h3 className="text-lg font-medium text-white">
+          Joe Blessyn K
+        </h3>
+        <p className="text-sm text-white mt-1">
+          People & Operations Head 
+        </p>
+        <p className="text-sm text-white mt-1">
+          AI Engineer
+        </p>
+      </div>
+
+      {/* Sandeep */}
+      <div className="text-center max-w-[220px]">
+        <img
+          src={sandeepImg}
+          alt="Sandeep Kumaar T"
+          className="
+            w-40 h-40
+            mx-auto
+            rounded-full
+            object-cover
+            mb-6
+          "
+        />
+        <h3 className="text-lg font-medium text-white">
+          Sandeep Kumaar T
+        </h3>
+        <p className="text-sm text-white mt-1">
+          Data Engineer
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 
       </div>
     </PageTransition>

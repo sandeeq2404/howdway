@@ -13,13 +13,15 @@ export default function Navbar() {
   const location = useLocation();
 
   return (
-    <nav className="fixed top-0 left-0 w-full h-16 z-50 bg-black/60 backdrop-blur-md border-b border-white/10">
+    <nav className="fixed top-0 left-0 w-full h-16 z-50 bg-black/70 backdrop-blur-md border-b border-white/10">
+
+
       <div className="max-w-7xl mx-auto h-full px-6 flex justify-between items-center">
 
         {/* LOGO */}
         <Link
           to="/"
-          className="text-white text-lg font-semibold tracking-wide"
+          className="text-white/70 text-lg font-semibold tracking-wide hover:text-[#ff5f5f]"
         >
           HOWDWAY
         </Link>
@@ -34,7 +36,7 @@ export default function Navbar() {
                 to={link.path}
                 className={`text-sm transition ${
                   active
-                    ? 'text-white'
+                    ? 'text-white/70 hover:text-[#ff5f5f] font-medium'
                     : 'text-white/70 hover:text-white'
                 }`}
               >
@@ -42,14 +44,12 @@ export default function Navbar() {
               </Link>
             );
           })}
-
-          
         </div>
 
         {/* MOBILE BUTTON */}
         <button
           onClick={() => setOpen(!open)}
-          className="md:hidden text-white"
+          className="md:hidden text-[#1a1a1a]"
         >
           {open ? <X size={22} /> : <Menu size={22} />}
         </button>
@@ -57,7 +57,7 @@ export default function Navbar() {
 
       {/* MOBILE MENU */}
       {open && (
-        <div className="md:hidden bg-black/90 backdrop-blur-md px-6 py-6 space-y-4 border-t border-white/10">
+        <div className="md:hidden bg-[#ff5f5f] px-6 py-6 space-y-4 border-t border-black/10">
           {navLinks.map(link => (
             <Link
               key={link.path}
@@ -65,15 +65,13 @@ export default function Navbar() {
               onClick={() => setOpen(false)}
               className={`block text-sm ${
                 location.pathname === link.path
-                  ? 'text-white'
-                  : 'text-white/70 hover:text-white'
+                  ? 'text-white font-medium'
+                  : 'text-[#2f2f2f] hover:text-white'
               }`}
             >
               {link.name}
             </Link>
           ))}
-
-          
         </div>
       )}
     </nav>
