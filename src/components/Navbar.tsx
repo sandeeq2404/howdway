@@ -49,7 +49,7 @@ export default function Navbar() {
         {/* MOBILE BUTTON */}
         <button
           onClick={() => setOpen(!open)}
-          className="md:hidden text-[#1a1a1a]"
+          className="md:hidden text-white/70"
         >
           {open ? <X size={22} /> : <Menu size={22} />}
         </button>
@@ -57,7 +57,7 @@ export default function Navbar() {
 
       {/* MOBILE MENU */}
       {open && (
-        <div className="md:hidden bg-[#ff5f5f] px-6 py-6 space-y-4 border-t border-black/10">
+        <div className="md:hidden bg-white/70 px-6 py-6 space-y-4 border-t border-black/10">
           {navLinks.map(link => (
             <Link
               key={link.path}
