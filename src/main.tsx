@@ -1,20 +1,21 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import { BrowserRouter } from 'react-router-dom';
-import App from './App';
-import './index.css';
-import '@fontsource/space-grotesk/400.css';
-import '@fontsource/space-grotesk/500.css';
-import '@fontsource/space-grotesk/600.css';
-import { HelmetProvider } from 'react-helmet-async'; // <--- You imported it here
+import { Helmet } from "react-helmet-async";
 
+function Home() {
+  return (
+    <>
+      <Helmet>
+        <title>Your Page Title</title>
+        <meta property="og:title" content="Howdway" />
+        <meta property="og:description" content="We Scale Your Business online" />
+        <meta property="og:image" content="" />
+        <meta property="og:url" content="https://howdway.in/" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Helmet>
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
-    <HelmetProvider>  {/* <--- 1. ADD THIS WRAPPER */}
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
-    </HelmetProvider> {/* <--- 2. CLOSE IT HERE */}
-  </React.StrictMode>
-);
+      {/* Page content */}
+    </>
+  );
+}
+
+export default Home;
