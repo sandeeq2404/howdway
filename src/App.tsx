@@ -7,6 +7,7 @@ import Home from './pages/Home';
 import WhatWeDo from './pages/WhatWeDo';
 import About from './pages/About';
 import Contact from './pages/Contact';
+import ChatbotWidget from "./components/ChatbotWidget";
 
 
 
@@ -27,7 +28,7 @@ export default function App() {
            
         </Routes>
       </main>
-
+      <ChatbotWidget />
       <Footer />
     </div>
   );
