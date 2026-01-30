@@ -1,7 +1,8 @@
 import { useEffect, useState, useRef } from "react";
 import axios from "axios";
 
-const API_URL = "http://13.53.212.214:8000/chat"; 
+const API_URL = "https://api.howdway.in/chat";
+
 const MILD_RED = "#ff5f5f";
 
 type ChatbotWidgetProps = {
