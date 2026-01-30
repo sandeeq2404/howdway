@@ -5,7 +5,7 @@ import kmgurukulamLogo from '../assets/main/kmgurukulam.webp';
 import littleOrchidsLogo from '../assets/main/littleorchids.webp';
 import home1Image from '../assets/main/home1.webp';
 
-import ChatbotWidget from '../components/ChatbotWidget'
+
 
 
 
@@ -202,7 +202,7 @@ const Home = () => {
 
     {/* RIGHT EXPANDING BOXES */}
     <ExpandingServices />
-    <ChatbotWidget autoOpen />
+    
 
   </div>
 </section>

@@ -1,11 +1,16 @@
 import { useEffect, useState, useRef } from "react";
 import axios from "axios";
 
-const API_URL = "http://127.0.0.1:8000/chat";
+const API_URL = "http://13.53.212.214:8000/chat"; 
 const MILD_RED = "#ff5f5f";
 
-export default function ChatbotWidget() {
+type ChatbotWidgetProps = {
+  autoOpen?: boolean;
+};
+
+export default function ChatbotWidget({ autoOpen = false }: ChatbotWidgetProps) {
   const [isOpen, setIsOpen] = useState(false);
+  const [hasAutoOpened, setHasAutoOpened] = useState(false);
   const [messages, setMessages] = useState<any[]>([]);
   const [input, setInput] = useState("");
   const [sessionId] = useState(() => crypto.randomUUID());
@@ -13,24 +18,25 @@ export default function ChatbotWidget() {
   const [isTyping, setIsTyping] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement | null>(null);
 
-  // 🔥 Auto-open after 5 seconds
+  // 🔥 Auto-open once on home page after 5s
   useEffect(() => {
-    const timer = setTimeout(() => {
-      openChat();
-    }, 5000);
-    return () => clearTimeout(timer);
-  }, []);
+    if (autoOpen && !hasAutoOpened) {
+      const timer = setTimeout(() => {
+        openChat();
+        setHasAutoOpened(true);
+      }, 5000);
+      return () => clearTimeout(timer);
+    }
+  }, [autoOpen, hasAutoOpened]);
 
-  // 🔽 Auto-scroll
+  // 🔽 Auto-scroll on new messages or typing
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
-  }, [messages, isTyping]);
+  }, [messages, isTyping, isOpen]);
 
   const openChat = () => {
     setIsOpen(true);
-    setMessages([
-      { sender: "bot", text: "Hi 👋 Welcome to Howdway! I’m Lara." },
-    ]);
+    setMessages([{ sender: "bot", text: "Hi 👋 Welcome to Howdway! I’m Lara." }]);
     setStage("greet");
   };
 
@@ -54,7 +60,7 @@ export default function ChatbotWidget() {
       setTimeout(() => {
         setIsTyping(false);
         setMessages((prev) => [...prev, { sender: "bot", text: res.data.message }]);
-      }, 1500);
+      }, 1000);
     } catch {
       setIsTyping(false);
       setMessages((prev) => [
@@ -78,7 +84,7 @@ export default function ChatbotWidget() {
       setTimeout(() => {
         setIsTyping(false);
         setMessages((prev) => [...prev, { sender: "bot", text: res.data.message }]);
-      }, 1500);
+      }, 1000);
     } catch {
       setIsTyping(false);
       setMessages((prev) => [
@@ -143,6 +149,7 @@ export default function ChatbotWidget() {
               </div>
             )}
 
+            {/* 👇 Auto-scroll anchor */}
             <div ref={messagesEndRef} />
           </div>
 
