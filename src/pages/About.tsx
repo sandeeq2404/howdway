@@ -124,7 +124,7 @@ const About = () => {
           Kumaravel N
         </h3>
         <p className="text-sm text-white mt-1">
-          CEO
+          
         </p>
         <p className="text-sm text-white mt-1">
           Data Science 
@@ -148,7 +148,7 @@ const About = () => {
           Thamizhselvan M
         </h3>
         <p className="text-sm text-white mt-1">
-          CTO 
+           
         </p>
         <p className="text-sm text-white mt-1">
           Software Developer
@@ -172,7 +172,7 @@ const About = () => {
           Joe Blessyn K
         </h3>
         <p className="text-sm text-white mt-1">
-          People & Operations Head 
+           
         </p>
         <p className="text-sm text-white mt-1">
           AI Engineer
